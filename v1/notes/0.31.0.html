@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>doz 0.31.0</title>
+<style>:root{color-scheme:light dark}body{font:16px/1.55 -apple-system,system-ui,sans-serif;max-width:46rem;margin:2rem auto;padding:0 1rem}code,pre{font:14px ui-monospace,Menlo,monospace}pre{overflow:auto;padding:.75rem;border-radius:6px;background:color-mix(in srgb,currentColor 8%,transparent)}</style>
+</head><body>
+<h1>doz 0.31.0</h1>
+<h1>Dozer Sandbox 0.31.0 — the first public release</h1>
+<p>Fast, suspendable Linux micro-VMs for coding agents on your Mac: each project in its own small VM that pauses in a millisecond, hibernates to disk and wakes in a third of a second with everything still running.</p>
+<h2>Highlights</h2>
+<ul>
+<li><strong>Sandboxes that sleep like a laptop</strong> — pause, sleep, hibernate and wake; sessions survive every wake and a</li>
+</ul>
+<p>restart of the host.</p>
+<ul>
+<li><strong>Agents, set up and safe</strong> — Claude Code, Codex and pi on any base image; their credentials stay on your Mac</li>
+</ul>
+<p>behind Dozer&#x27;s proxy, which is the only way out of a sandbox and asks before it lets anything new through.</p>
+<ul>
+<li><strong>Your project, live</strong> — <code>/workspace</code> is your folder; <code>.dozignore</code> and <code>.dozreadonly</code> keep an agent away from</li>
+</ul>
+<p>secrets or stop it changing files.</p>
+<ul>
+<li><strong>A dashboard</strong> (<code>doz ui</code>) — terminals in the browser, restore points, resources, permissions; installable as</li>
+</ul>
+<p>an app. <code>doz serve</code> opens it to the other browsers of your home network.</p>
+<ul>
+<li><strong>Signed and notarised</strong>, with a signed update feed and three channels — stable, beta and canary</li>
+</ul>
+<p>(<code>updates.mode</code>: off, notify — the default — or auto).</p>
+<h2>Install</h2>
+<pre><code>
+brew install dozer-sandbox/tap/doz
+doz onboard
+</code></pre>
+<p>Requires an Apple silicon Mac with macOS 26 or later. The manual: <code>docs/manual/</code> in the repository.</p>
+</body></html>
