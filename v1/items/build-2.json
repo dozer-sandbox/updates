@@ -1,7 +1,7 @@
 {
   "archive": "https://github.com/dozer-sandbox/dozer-sandbox/releases/download/v0.31.1/doz-0.31.1-macos-arm64.tar.gz",
   "build": 2,
-  "channel": "beta",
+  "channel": "stable",
   "date": "2026-10-08",
   "history": [
     {
@@ -11,6 +11,11 @@
     },
     {
       "channel": "beta",
+      "date": "2026-10-08",
+      "event": "promoted"
+    },
+    {
+      "channel": "stable",
       "date": "2026-10-08",
       "event": "promoted"
     }
