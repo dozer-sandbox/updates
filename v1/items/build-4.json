@@ -1,0 +1,18 @@
+{
+  "archive": "https://github.com/dozer-sandbox/dozer-sandbox/releases/download/v0.32.0-rc.2/doz-0.32.0-rc.2-macos-arm64.tar.gz",
+  "build": 4,
+  "channel": "canary",
+  "date": "2026-10-09",
+  "history": [
+    {
+      "channel": "canary",
+      "date": "2026-10-09",
+      "event": "published"
+    }
+  ],
+  "notes": "https://updates.dozersandbox.com/v1/notes/0.32.0-rc.2.html",
+  "sha256": "56f78a477828e15518f4738f564a82aab7ef59c47d8f1b86e10aabf5402ce001",
+  "signature": "vRW/suhzlzh+RB5TOu0eWp2V870o3jP1XkEc+R4otCNnF6L1IZfbLx9W7hu8bYsIsWRrBDOjgre2GNmHvrhXCQ==",
+  "size": 21109123,
+  "version": "0.32.0-rc.2"
+}
