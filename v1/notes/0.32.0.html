@@ -1,0 +1,15 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>doz 0.32.0</title>
+<style>:root{color-scheme:light dark}body{font:16px/1.55 -apple-system,system-ui,sans-serif;max-width:46rem;margin:2rem auto;padding:0 1rem}code,pre{font:14px ui-monospace,Menlo,monospace}pre{overflow:auto;padding:.75rem;border-radius:6px;background:color-mix(in srgb,currentColor 8%,transparent)}</style>
+</head><body>
+<h1>doz 0.32.0</h1>
+<h1>Dozer Sandbox 0.32.0</h1>
+<p><strong>What the agent is doing — and an easier update</strong> (issue #223; owner on 0.32.0-rc.4, 2026-10-09: &quot;all pass; ship&quot;). Canary: stable moves on the owner&#x27;s promote.</p>
+<ul>
+<li><strong>Agent status</strong> (OSC 7501, Mitchell Hashimoto&#x27;s program-status protocol): deckhold — inside each sandbox, reading every session&#x27;s output whether or not anyone is attached — answers the agent&#x27;s support query and keeps its status (working, done, blocked with a kind, error; the spec&#x27;s limits and validation; a parser fuzz of 20,000 inputs). The host keeps one status watcher per running session (re-opened after a wake). <code>doz ls</code> and <code>doz sessions</code> gain an AGENT column (the most urgent state per sandbox); the dashboard shows it on session tabs, All sessions tiles and a dot on the sidebar&#x27;s sandbox, and a notice on done / blocked (&quot;needs permission&quot;, &quot;has a question&quot;, &quot;needs sign-in&quot;) / error. Claude Code ≥ 2.1.295 and pi ≥ 1.1.0 report; Codex doesn&#x27;t yet. The sequences still reach the user&#x27;s own terminal unchanged. A new VM check (<code>make test-vm-status</code>) drives a fake agent through every state, attached and detached, across sleep and hibernate.</li>
+<li><strong><code>doz upgrade [-y]</code></strong> (was <code>doz update</code>, which still works and says so): asks first, <code>-y</code> doesn&#x27;t; refreshes only Dozer&#x27;s Homebrew tap first and never leaves Homebrew waiting on its y/n; a check a person asks for goes past the CDN&#x27;s cached copy of the feed (it was 10 minutes stale after a publish); <code>make publish</code> waits until the live feed lists the release. The notice line and the formula&#x27;s caveat say <code>doz upgrade -y</code>.</li>
+<li><strong><code>doz ui --detach</code></strong> and <strong><code>doz ui stop</code></strong>: the dashboard in the background (log: <code>&lt;store&gt;/ui.log</code>), stopped from any terminal. A <code>doz ui</code> suspended with Ctrl-Z no longer makes later ones hang: they give up after 3 s and name the process and what to do.</li>
+<li>Release scripts: no <code>cmd | grep -q</code> under pipefail (it failed rc.1&#x27;s publish on a correctly signed binary).</li>
+</ul>
+</body></html>
